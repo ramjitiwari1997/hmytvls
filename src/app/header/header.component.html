@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="hamburger" (click)="hamClick()">
+        <img *ngIf="isclicked==true" src="../../assets/svg/cross.svg" alt="" srcset="" width="25px" >
+        <img *ngIf="isclicked==false" src="../../assets/svg/hamberger.svg" alt="" srcset="" width="25px" >
+    </div>
+    
+    <div class="header_par">
+        <div class="logoDiv">
+            <img src="../../assets/svg/logo.svg" alt="" srcset="" class="logoSvg">
+        </div>
+        <div class="menu">
+            <div>
+                World
+            </div>
+            <div>
+                Leisure
+            </div>
+            <div>
+                About Us & Contact
+            </div>
+            <div> Consult & Visa</div>
+        </div>
+    </div>
+    
+    <div class="menu_par menuItems" [ngClass]="{'width100':isclicked==true}">
+        <div>
+            Menu
+        </div>
+        <div class="menuItems">
+            <div>
+                World
+            </div>
+            <div>
+                Leisure
+            </div>
+            <div>
+                About Us & Contact
+            </div>
+            <div> Consult & Visa</div>
+        </div>
+        <div class="menuFooter" [ngClass]="{'posRel':isclicked==false}">
+            Made with <span class="heartIcon"><img src="./../../assets/svg/heart.svg" alt="" srcset=""></span> for hormony tours
+        </div>
+    </div>
+</div>
